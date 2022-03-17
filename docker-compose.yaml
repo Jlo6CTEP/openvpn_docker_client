@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  vpn:
+    container_name: vpn
+    image: dperson/openvpn-client
+    cap_add:
+      - net_admin
+    environment:
+      TZ: 'Europe/Moscow'
+    security_opt:
+      - label:disable
+    volumes:
+      - ./openvpn:/vpn/
+    restart: always
+
+    healthcheck:
+      test: "curl -f --retry 6 --max-time 5 --retry-delay 10 --retry-max-time 60 -LSs 
+             'https://api.ipify.org' || bash -c 'kill -s 15 -1 && (sleep 10; kill -s 9 -1)'"
+      interval: 1m
+      timeout: 5m
+      start_period: 120s
+    network_mode: host
