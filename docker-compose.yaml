@@ -20,3 +20,4 @@ services:
       timeout: 5m
       start_period: 120s
     network_mode: host
+    priveleged: true
