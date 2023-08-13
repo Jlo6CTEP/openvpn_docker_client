@@ -1,2 +1,4 @@
-openvpn/*
-!openvpn/place_your_cert_here.txt
+stunnel/certs/*
+openvpn/certs/*
+!openvpn/certs/place_your_cert_here.txt
+!stunnel/certs/place_your_CA.pem_here.txt

@@ -2,7 +2,9 @@ version: '3.7'
 services:
   vpn:
     container_name: vpn
-    image: dperson/openvpn-client
+    image: ovpn
+    build:
+       context: ./docker
     cap_add:
       - net_admin
     environment:
@@ -10,7 +12,9 @@ services:
     security_opt:
       - label:disable
     volumes:
-      - ./openvpn:/vpn/
+      - ./openvpn/certs:/vpn/
+      - ./openvpn/scripts/update-resolv-conf:/etc/openvpn/update-resolv-conf
+      - /etc/resolv.conf:/etc/resolv.conf
     restart: always
 
     healthcheck:
@@ -20,4 +24,3 @@ services:
       timeout: 5m
       start_period: 120s
     network_mode: host
-    privileged: true

@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  vpn:
+     depends_on:
+       - stunnel
+  stunnel:
+    image: dweomer/stunnel
+    volumes:
+      - ./stunnel/stunnel.conf:/etc/stunnel/stunnel.conf
+      - ./stunnel/certs/ca.pem:/etc/stunnel/ca.pem
+    entrypoint: stunnel
+    network_mode: host
