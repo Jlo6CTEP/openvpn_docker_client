@@ -1,12 +1,13 @@
 This project allows setting up openvpn client with docker. There is also a version that is able to hide your VPN traffic behind TLS for extra security and stability against opressive governments' attempts to disrupt VPN connections.
 
 ## Setup
-* Put your ovpn cert into ./openvpn/certs
+* Put your ovpn cert into `./openvpn/certs`
 * Start the container with `docker-compose up -d`
 * Enjoy
 ## VPN over TLS
 In this case you will need a little bit more setup in addition to your regular ovpn cert
-* Put your `CA.pem` which is your root CA cert into ./stunnel/certs/
+* Put your `CA.pem` which is your root CA cert into `./stunnel/certs/`
+* Don't forget to update `./stunnel/stunnel.conf` file with the ip address of your instance
 * Start with `docker compose -f docker-compose.yaml -f docker-compose-tls.yaml up -d`
 * Enjoy
 
