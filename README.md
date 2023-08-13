@@ -13,7 +13,7 @@ In this case you will need a little bit more setup in addition to your regular o
 
 Beware: your openvpn provider should support VPN over TLS on their end and provide you with both ovpn cert and CA cert.
 You can check out my [repo](https://github.com/Jlo6CTEP/openvpn-pihole) if you want to set up one for yourself. It is based on [simonwep](https://github.com/simonwep)'s project with added VPN-over-TLS capability on top.
-You can obtain `ca.pem` file from the contents of `openvpn-pihole/openvpn/pki/ca.crt`. Just copy this file's content into `ca.crt` and you should be good to go
+You can obtain `ca.pem` file from the contents of `openvpn-pihole/openvpn/pki/ca.crt`. Just copy this file's content into `ca.pem` and you should be good to go
 
 ## Docker-capable systems other than Linux
 This will work on any system that supports docker, however there are few caveats to it
