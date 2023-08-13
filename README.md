@@ -42,6 +42,7 @@ The process is similar to one in linux version
 * Install [stunnel](https://www.stunnel.org/downloads.html), it is not on winget so you have to resort to inferior Windows-way of installing software. i.e. through GUI
 * Put your `ca.pem` and `stunnel.conf` to `C:/Program Files (x86)/stunnel/config/`
 * Since managing anything is a major clusterfuck if we are talking Windows, go ahead and launch a *separate* program called `stunnel GUI start` to make sure that everything is ok and stunnel in fact starts and works as intended
+  * You can find this and other `stunnel` programs in the Start menu (Win key) 
 * Now we will make sure that it starts when the system starts and keeps running no matter what
 * You have a *separate* program called `stunnel GUI stop` to stop your stunnel, you want to do this to free the port
 * Install a service through `stunnel service install` which is, you guessed it, yet another *separate* program
