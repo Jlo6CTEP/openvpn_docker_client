@@ -1,0 +1,3 @@
+[submodule "dockerfiles-stunnel"]
+	path = dockerfiles-stunnel
+	url = https://github.com/dweomer/dockerfiles-stunnel

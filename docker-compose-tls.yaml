@@ -4,7 +4,9 @@ services:
      depends_on:
        - stunnel
   stunnel:
-    image: dweomer/stunnel
+    image: stunnel
+    build:
+        context: ./dockerfiles-stunnel
     volumes:
       - ./stunnel/stunnel.conf:/etc/stunnel/stunnel.conf
       - ./stunnel/certs/ca.pem:/etc/stunnel/ca.pem
