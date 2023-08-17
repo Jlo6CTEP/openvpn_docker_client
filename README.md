@@ -21,6 +21,7 @@ This will work on any system that supports docker, however there are few caveats
  Which means that if you want to access something in the internet, you should do it from the VM. I have no idea whether it is possible or not
 * On Windows (with WSL2) the same applies, but here your VM is WSL itself, so, you can easily access your development tools across the private network, and even install browser and surf the Web, if you have WSLg configured which you probably should by default with the newer Ubuntu distros. 
 You might also want to enable systemd for your WSL distro, because stunnel4 uses it
+ * Howerver, sometimes it does not create tun/tap device on host, I do not know why yet
 
 ## Without docker
 If you can not use docker, you should install everything on the host machine instead
