@@ -59,4 +59,4 @@ TBD
 Probably not TBD, because I have no MacOS devices. Should work similarly to Windows / Linux though 
 
 ## Known issues
-* When in docker, machine becomes unpingable from LAN. Access form VPN works
+* When in docker, machine may (with some routers) becomes unpingable from LAN. Access from VPN works
