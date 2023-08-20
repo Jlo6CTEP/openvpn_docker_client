@@ -19,7 +19,7 @@ You can obtain `ca.pem` file from the contents of `openvpn-pihole/openvpn/pki/ca
 This will work on any system that supports docker, however there are few caveats to it
 * On MacOS, docker spins up a lightweight linux VM, so the `network_mode: host` will work in the context of that VM, not in the host machine. 
  Which means that if you want to access something in the internet, you should do it from the VM. I have no idea whether it is possible or not
-* On Windows (with WSL2) the same applies
+* On Windows (with WSL2) the same applies if you are using Docker Desktop. If you (as you probably should) have installed your docker on WSL directly, it should work. You can install all your development tools there and even browse the web if you have WSLg enabled inside the WSL
 
 ## Without docker
 If you can not use docker, you should install everything on the host machine instead
