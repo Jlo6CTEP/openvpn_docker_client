@@ -58,3 +58,6 @@ Probably not TBD, because I have no MacOS devices. Should work similarly to Wind
 
 ## Known issues
 * When in docker, machine may (with some routers) becomes unpingable from LAN. Access from VPN works
+
+## Kudos
+Kudos to [this guy](https://github.com/potemin1999) for coming up with the idea
