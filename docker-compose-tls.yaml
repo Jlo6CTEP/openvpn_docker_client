@@ -12,3 +12,4 @@ services:
       - ./stunnel/certs/ca.pem:/etc/stunnel/ca.pem
     entrypoint: stunnel
     network_mode: host
+    restart: always
