@@ -51,7 +51,35 @@ The process is similar to one in linux version
 * Optional: set 172.20.0.2 as your default DNS server (this will also cut annoying ads btw) and will allow opening sites that are DNS-level blocked
 
 ### Android
-TBD  
+
+ * Install application [SSLSocks TLS/SSL tunnel](https://play.google.com/store/apps/details?id=link.infra.sslsocks)
+ * In config type
+```
+verifyChain = yes
+CAfile = ca.pem
+foreground = yes
+client = yes
+pid = /data/user/0/link.infra.sslsocks/files/pid
+
+[server]
+client = yes
+accept = 127.0.0.1:9443
+connect = <YOUR_SERVER_IP>:44443
+```
+ * In `SERTS/KEYS` add `ca.pem` file
+ * Run it by open `HOME` -> `Running`
+ * You can check that its working by open `LOG`
+
+ Now go to OpenVPN application
+
+ * Download a new `<name>.ovpn` file and comment lines by typing # at the beginning of the line.
+ ```
+#up /etc/openvpn/update-resolv-conf
+#down /etc/openvpn/update-resolv-conf
+ ```
+ * Add the modified `<name>.ovpn` file to OpenVPN
+ * Open settings and check `Seamless Tunnel`
+ * Try to connect
 
 ### MacOS
 Probably not TBD, because I have no MacOS devices. Should work similarly to Windows / Linux though 
