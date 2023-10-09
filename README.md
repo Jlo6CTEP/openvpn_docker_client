@@ -30,7 +30,7 @@ The process is fairly straightforward
 * Install OpenVPN and stunnel4 `sudo apt-get install openvpn` and `sudo apt-get install stunnel4`
 * Stick your `ca.pem` and `stunnel.conf` to `/etc/stunnel/`
 * Start stunnel service `sudo service stunnel4 start`
-* Start OpenVPN with `sudo openvpn --config <yor_config.ovpn>`
+* Start OpenVPN with `sudo openvpn --config <your_config.ovpn>`
 ### Windows
 The process is similar to one in linux version
 * Grab all the needed files (in this case you will need `stunnel.conf` from `win` folder)
@@ -67,8 +67,8 @@ accept = 127.0.0.1:9443
 connect = <YOUR_SERVER_IP>:44443
 ```
  * In `SERTS/KEYS` add `ca.pem` file
- * Run it by open `HOME` -> `Running`
- * You can check that its working by open `LOG`
+ * Run the tunnel with `HOME` -> `Running`
+ * You can check if it is working by opening `LOG` menu
 
  Now go to OpenVPN application
 
